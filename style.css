@@ -1,0 +1,159 @@
+BODY {BackGround-color:silver;
+     }
+
+H1, H2, H3, FAQ {
+    /*  font-family: "Arial CE", Arial, Helvetica, sans-serif;  */
+    color: white;
+    background-color: #201e71;
+    font-weight: bold;
+    text-align : center;
+    }
+    
+H1 {
+    font-size: 20pt;
+    margin-bottom: 8pt;
+    /*  margin-left: 20pt;  */
+    }    
+    
+H2 {
+    font-size: 12pt;
+    text-align : center;
+    /* margin-left: 25pt;  */
+    }    
+
+H3 {
+    font-size: 10pt;
+    /* margin-left: 25pt;  */ 
+   }
+
+H6 {
+    font-size: 8pt;
+    margin-bottom: 0pt;
+    /* margin-top: 0pt;  */
+    }
+    
+
+DIV.hm {
+    color: #00008b;
+    margin: 5pt;
+    background-color: #ffffcc;
+	border : 3px  outset #ffcccc;
+	width: 90%;
+	}
+
+DIV.main{
+  margin: 5pt;
+	padding:5 5 5 5;
+	border : 3px  outset #ffcccc;
+	width: 90%;
+	max-width: 900px;
+	}
+	
+button {
+	cursor:pointer;
+  display: inline-block;
+  overflow: hidden;
+	color: #00008b;
+	font-weight: bold;
+	width : 100px;
+	height : 50px;
+	text-align : center;
+	margin :2px 2px 2px 2px;
+}	
+
+DIV.hmi {
+	display : inline;
+	cursor:pointer;
+	width : 80px;
+	height : 80px;
+	text-align : center;
+	vertical-align : center;
+	border : thin outset #ffcccc;
+	margin :6 6 6 6;
+	background-color: #e8e8e8;
+	
+}
+.shmi {
+	display : block;
+	cursor:pointer;
+	border : thin outset #ffcccc;
+	margin :6 6 6 6;
+	background-color: #e8e8e8;
+	
+}
+A {
+    text-decoration: none;
+    vertical-align : center;
+    margin:3 5 3 5;
+    }
+
+A:link {
+	color: #00008b;
+	}
+A:visited {
+    	color: #00008b;
+	}
+    
+A:hover {
+    text-decoration: none;
+    color: #8b008b;
+    background-color: #e8e8e8;
+    }    
+
+.navbar {
+    /* font-family: "Arial CE", Arial, Helvetica, sans-serif;  */
+    text-decoration: none;
+    color: #00008b;
+    font-size: 10pt;
+    text-align: center;
+    font-weight: bold;
+    margin: 5pt;
+    background-color: #ffffff;
+}
+.datatable{
+	TABLE-LAYOUT:fixed; border-collapse:collapse;
+}
+          .bg {font:8pt Verdana; background-color:purple; color:white}
+          .row {font:8pt Verdana; border-bottom:1px solid #CC88CC}
+          .header {font:bold 9pt Verdana;padding:2px; border:2px outset gray}
+          .up {
+	background-color: #F0FFFF;
+}
+ .down {background-color:#FFDDDD;}
+
+P {
+   text-align: justify;
+   margin-left: 30pt;
+   margin-right: 30pt;
+  }
+
+DD {
+   text-align: justify;
+   margin-left: 30pt;
+   margin-right: 30pt;
+  }
+
+img {
+  border:5px;
+   /* font-family: "Arial CE", Arial, Helvetica, sans-serif;  */
+  }
+
+.datum {
+   margin-left: 0pt;
+   margin-right: 0pt;
+   margin-top: 0pt;
+   font-size: 9pt;  
+   font-weight: bold;
+}
+
+
+
+.odkazyw {
+    border : solid 2px #ff0000;
+    margin-left: 10pt;   
+    font-weight: bold;
+    margin-top: 10pt;
+
+    width:95%;
+    background-color: #99ccff;
+}
