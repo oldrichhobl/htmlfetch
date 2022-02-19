@@ -1,0 +1,171 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat"><html lang="cs">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<title>Fakturace:5.x</title>
+<link type="text/css" rel="stylesheet" href="/styly/base.css" title="BASE"> <script type="text/javascript">//
+      var lok = ['teèka','        èárka']; 
+      </script> <script type="text/javascript" src="scall.js"></script></head>
+<body oncontextmenu="ContextMenu(); return false;" onload="init('/data/Definice/Sestavy/Fakturace/');">
+<div class="maindiv">
+<div id="oContextHTML" style="display:none; width:120px; position:absolute;" onmouseout="hideMenu(); return false;">
+<div onmouseover="this.style.background='gold';" onclick="gotoSestava('/index.html')" onmouseout="this.style.background='#e4e4e4'; window.event.cancelBubble = true;" style=" font-family:verdana; font-size:70%;height:15px; background:#e4e4e4;border:1px solid black; padding:4px;
+     cursor:pointer;">Hlavní stránka</div>
+<div onmouseover="this.style.background='gold'" onmouseout="this.style.background='#e4e4e4'; window.event.cancelBubble = true;" onclick="parent.gotoobla('/Document/pomoc.htm')" style="font-family:verdana; font-size:70%; height:15px; background:#e4e4e4; border:1px solid black; padding:4px; cursor:pointer; border-top:0px solid black">
+        Pomoc</div>
+<div onmouseover="this.style.background='gold'" onmouseout="this.style.background='#e4e4e4'; window.event.cancelBubble = true;" onclick="parent.gotoobla('/nastaveni.htm')" style="font-family:verdana; font-size:70%; height:15px; background:#e4e4e4; border:1px solid black; padding:4px; cursor:pointer; border-top:0px solid black">
+        Nastavení</div>
+</div>
+<div id="popup1" class="overlay">
+<div class="popup">
+<h1>Chyba</h1><a class="close" href="#">×</a><div id="messContent" class="content">
+        Zadne chybove hlaseni.
+      </div><a id="closeBtn" href="#">OK</a></div>
+</div>
+<table class="maintab" border="0">
+<tr>
+<td align="center">
+<DIV class="zahlavi">F a k t u r y</DIV>
+</td>
+<td align="center">
+<div class="zahlavi2">
+<div style="font-size:smaller;" title="Nastavení teèky nebo èárky v èíselných výstupech">Lokalizace
+: 
+            <a href="javascript:zmenaloc()" id="lokalizace">x</a></div>
+</div>
+<div id="oblasttx"> Oblast neuvedena</div>
+</td>
+</tr>
+</table>
+<div class="filtry">
+<h3>Nastavení filtrù
+     
+      <input type="button" value="Ulož nastavení filtrù." onclick="zapiscookies()" class="ulozbutton" title="Zapamatuj nastavení filtrù pro sestavy"><span class="fvystupu">
+            Formát výstupu:
+                                       <input class="Ou" type="radio" name="Ou" value="H" title="Formát výstupu HTML (local coversion)" checked><input class="Ou" type="radio" name="Ou" value="X" title="Formát výstupu DIRECT CALL"><input class="Ou" type="radio" name="Ou" value="X" title="Formát výstupu XML"><input class="Ou" type="radio" name="Ou" value="P" title="Formát výstupu PDF" disabled></span></h3><span id="Vfilter" class="fvozidla"><fieldset class="fieldf">
+<legend>Vozidla
+ : </legend>
+<div class="f"><span class="fl">Všechna vozidla
+: 
+        </span><span class="fs"><input type="radio" name="V" checked></span><div class="fp"> </div>
+</div>
+<div class="f" id="skvozidel"><span class="fl">Skupina vozidel
+ :
+        </span><span class="fs"><input type="radio" name="V" checked></span><span class="fp"><select id="oskupiny" class="inputspz"><option>--nevybráno--</option></select></span></div>
+<div class="f"><span class="fl"><a href="javascript:zobrazauto();" title="Zobrazit podrobnosti o vozidle">
+           ?            Jedno vozidlo
+:</a></span><span class="fs"><input type="radio" name="V" checked></span><span class="fp"><input type="text" id="autospz" class="inputspz" ondblclick="vyberauto();"></span></div>
+</fieldset></span><div id="oSelectSpz">
+<div onmouseover="this.style.background='gold';" onmouseout="this.style.background='#e4e4e4'; window.event.cancelBubble = true;" style=" font-family:verdana; font-size:70%;height:15px; background:#e4e4e4;border:1px solid black; padding:4px;
+     cursor:pointer;">Vyber SPZ  <a class="closeoSelectSpz" href="#">×</a></div>
+<div id="sspz">
+        ?? ??
+      </div>
+<div onmouseover="this.style.background='gold'" onmouseout="this.style.background='#e4e4e4';" onclick="selectedSpz(); window.event.cancelBubble=true;" style="font-family:verdana; font-size:70%; height:15px; background:#e4e4e4; border:1px solid black; padding:4px; cursor:pointer; border-top:0px solid black">
+        Vybráno ?</div>
+</div>
+<fieldset class="fieldf" id="Cfilter">
+<legend>Èasový úsek
+ :  </legend>
+<div><label><input type="radio" name="C">Zadaný mìsíc a rok
+ :
+      </label><label class="fp"><small><select id="vybrmes" name="vybrmes" size="1" onchange="JinyMes()" class="input"><option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option></select><select id="vybrrok" name="vybrrok" size="1" onchange="JinyRok()" class="input"><option>1999</option>
+<option>2000</option>
+<option>2001</option>
+<option>2002</option>
+<option>2003</option>
+<option>2004</option>
+<option>2005</option>
+<option>2006</option>
+<option>2007</option>
+<option>2008</option>
+<option>2009</option>
+<option>2010</option>
+<option>2011</option>
+<option>2012</option>
+<option>2013</option></select></small></label></div>
+<div><label><input type="radio" name="C">
+ Od do :
+        <input type="date" id="ointerval" data-date-format="DD.MM.YYYY" class="inputinterval" title="Zacatek intervalu Od"><input type="date" id="dinterval" data-date-format="DD.MM.YYYY" class="inputinterval" title="Konec intervalu Do"></label></div>
+<div><label><input type="radio" name="C">Jiné období<select id="opcas" class="inputinterval"><option>--nevybráno--</option></select></label></div>
+</fieldset><span class="ffree">
+                   
+  </span><span class="fvozidla"><fieldset class="fieldf">
+<legend>Výbìr oblasti
+ : </legend>
+<div class="f"><span class="fp"><select id="ooblasti" class="inputoblast"><option>--nevybráno--</option></select></span></div>
+</fieldset></span><span class="fradio"><fieldset class="fieldf">
+<legend><text>Viditelnost prvkù v sestavì</text> : 
+      </legend>
+<div class="rflon"><span class="flon"><text>prvky z</text> : 
+        </span><span class="fpo" title="vozidla">V</span><span class="fpo" title="pøívìsy">P</span><span class="fpo" title="øidièi">R</span><span class="fpo" title="Pøepravci - objednatelé">O</span></div>
+<div class="rflon"><span class="flon"><text>Nefiltrovat</text>:
+        </span><span class="fpo"><input type="radio" name="rvv" value="0" title="Nefiltrovat"></span><span class="fpo"><input type="radio" name="rvp" value="0" title="Nefiltrovat" checked></span><span class="fpo"><input type="radio" name="rvr" value="0" title="Nefiltrovat" checked></span><span class="fpo"><input type="radio" name="rvo" value="0" title="Nefiltrovat" checked></span></div>
+<div class="rflon"><span class="flon"><text>Patøil do oblasti v okamžiku tvorby sestavy</text>:
+        </span><span class="fpo"><input type="radio" name="rvv" value="1" title="Volba je závislá na datu tvorby sestavy a proto nezaruèuje vždy stejný obsah sestavy"></span><span class="fpo"><input type="radio" name="rvp" value="1" title="Volba je závislá na datu tvorby sestavy a proto nezaruèuje vždy stejný obsah sestavy"></span><span class="fpo"><input type="radio" name="rvr" value="1" title="Volba je závislá na datu tvorby sestavy a proto nezaruèuje vždy stejný obsah sestavy"></span><span class="fpo"><input type="radio" name="rvo" value="1" title="Volba je závislá na datu tvorby sestavy a proto nezaruèuje vždy stejný obsah sestavy"></span></div>
+<div class="rflon"><span class="flon"><text>Patøil do oblasti aspoò jeden den v období</text>:
+        </span><span class="fpo"><input type="radio" name="rvv" value="2" title="Patøil do oblasti aspoò jeden den v období" checked></span><span class="fpo"><input type="radio" name="rvp" value="2" title="Patøil do oblasti aspoò jeden den v období"></span><span class="fpo"><input type="radio" name="rvr" value="2" title="Patøil do oblasti aspoò jeden den v období"></span><span class="fpo"><input type="radio" name="rvo" value="2" title="Patøil do oblasti aspoò jeden den v období"></span></div>
+<div class="rflon"><span class="flon"><text>Patøil do oblasti poslední den období</text>:
+        </span><span class="fpo"><input type="radio" name="rvv" value="3" title="Patøil do oblasti poslední den období"></span><span class="fpo"><input type="radio" name="rvp" value="3" title="Patøil do oblasti poslední den období"></span><span class="fpo"><input type="radio" name="rvr" value="3" title="Patøil do oblasti poslední den období"></span><span class="fpo"><input type="radio" name="rvo" value="3" title="Patøil do oblasti poslední den období"></span></div>
+<div class="rflon"><span class="flon"><text>Patøil do oblasti kdykoli v epoše DMD</text>:
+        </span><span class="fpo"><input type="radio" name="rvv" value="4" title="Patøil do oblasti kdykoli v epoše DMD"></span><span class="fpo"><input type="radio" name="rvp" value="4" title="Patøil do oblasti kdykoli v epoše DMD"></span><span class="fpo"><input type="radio" name="rvr" value="4" title="Patøil do oblasti kdykoli v epoše DMD"></span><span class="fpo"><input type="radio" name="rvo" value="4" title="Patøil do oblasti kdykoli v epoše DMD"></span></div>
+</fieldset></span><span class="fradio"><fieldset class="fieldf">
+<legend><text>Zaøazení èinností do sestavy</text> : 
+      </legend>
+<div class="rflon"><span class="flon"><text>prvky z</text> : 
+        </span><span class="fpo" title="vozidla"> V </span><span class="fpo" title="pøívìsy">P</span><span class="fpo" title="øidièi">R</span><span class="fpo" title="pøepravci - objednatelé">O</span></div>
+<div class="rflon"><span class="flon"><text>Nefiltrovat</text>:
+        </span><span class="fpo"><input type="radio" name="rzv" value="0" title="Nefiltrovat"></span><span class="fpo"><input type="radio" name="rzp" value="0" title="Nefiltrovat" checked></span><span class="fpo"><input type="radio" name="rzr" value="0" title="Nefiltrovat" checked></span><span class="fpo"><input type="radio" name="rzo" value="0" title="Nefiltrovat" checked></span></div>
+<div class="rflon"><span class="flon"><text>Zaøadit do sestavy jen ty èinnosti, pøi jejichž ukonèení prvek patøil do oblasti</text>:
+        </span><span class="fpo"><input type="radio" name="rzv" value="1" checked></span><span class="fpo"><input type="radio" name="rzp" value="1"></span><span class="fpo"><input type="radio" name="rzr" value="1"></span><span class="fpo"><input type="radio" name="rzo" value="1"></span></div>
+<div class="rflon"><span class="flon"><text>Zaøadit do sestavy jen ty èinnosti, pøi jejichž ukonèení prvek nepatøil do oblasti</text>:
+        </span><span class="fpo"><input type="radio" name="rzv" value="2"></span><span class="fpo"><input type="radio" name="rzp" value="2"></span><span class="fpo"><input type="radio" name="rzr" value="2"></span><span class="fpo"><input type="radio" name="rzo" value="2"></span></div>
+</fieldset></span><div class="filtry2"><label>Pøepravce :
+          <input type="text" name="kodp" value="" title="kodp:výbìr pøepravce napø.:   X__:177*****   nebo  *:177" class="inputspz"></label><label>Kód sazby :
+          <input type="text" name="kodr" value="" title="kodr: MTH,KM" class="inputspz"></label></div>
+</div>
+<div class="vybers">
+<h3>Výbìr sestav</h3>
+<fieldset class="fieldset">
+<legend>Souhrnné
+  : </legend><button type="button" onClick="javascript:showseskat('dsestav/','sfaktur.xml')" title="Zobrazí: Objednatel, èís.f., SPZ, Orgzv, UCTZV, Sazba, Datum, Cena ">Vyfakturované položky </button><button type="button" onClick="javascript:showseskat('dsestav/','sfakturne.xml')" title="Zobrazí: Objednatel, èís.f., SPZ, Orgzv, UCTZV, Sazba, Datum, Cena ">Nevyfakturované položky </button></fieldset>
+<fieldset class="fieldset">
+<legend>Podrobné
+  : </legend><button type="button" onClick="javascript:showseskat('dsestav/','sfakturpo.xml')" title="Zobrazí: Objednatel, èís.f., SPZ, Orgzv, UCTZV, Sazba, Datum, Cena ">Vyfakturované položky </button><button type="button" onClick="javascript:showseskat('dsestav/','sfakturpone.xml')" title="Zobrazí: Objednatel, èís.f., SPZ, Orgzv, UCTZV, Sazba, Datum, Cena ">Nevyfakturované položky </button></fieldset>
+<fieldset class="fieldset">
+<legend>Faktury
+  : </legend><button type="button" onClick="javascript:showseskat('dsestav/','fakturh.xml')" title="Zobrazí: Objednatel, èís.f.,DZP, èástky, k úhradì ">Vydané faktury </button></fieldset>
+<fieldset class="fieldset">
+<div><text>Filtr sloupcù (org.zaø.vozidla)</text>:</div><INPUT type="Text" id="zfilter" value="!!" placeholder="výbìr sloupcù tabulky: !!75!!" title="Filter pro rozdìleni sloupcù dle ORGZV napø.: !!75 " STYLE="width:225;"><div><text>Øádkové mezisouèty</text>:</div><INPUT type="Text" id="z2filter" value="!" placeholder="Maska pro mezisouèty: 75!!" title="Maska pro mezisouèty øádek napø.: 75!! " STYLE="width:225;"><button type="button" onClick="javascript:zobrKontov('Kontovnik.xml',zfilter.value,z2filter.value,'/shkontovnik3s.xsl')" title="Zobrazí tabulku vyfakturovaných èástek (objednatelé x ORGZV) ">Kontovník-vyfakturováno </button><button type="button" onClick="javascript:zobrKontov('KontovnikNefak.xml',zfilter.value,z2filter.value,'/shkontovnik3s.xsl')" title="Zobrazí tabulku nevyfakturovaných èástek (objednatelé x ORGZV) ">Kontovník-nevyfakturováno </button></fieldset>
+</div>
+<div class="sestavyvlastni">
+<h3>Vlastní sestavy - z adresáøe
+:      /data/Definice/Sestavy/Fakturace/</h3>
+<fieldset class="fieldset">
+<legend>1.skupina 
+ : </legend>
+<div id="sdiv"></div>
+</fieldset>
+<fieldset class="fieldset">
+<legend>2.skupina 
+ : </legend>
+<div id="sdiv2"></div>
+</fieldset>
+<hr>
+</div>
+<div><input class="clad" type="radio" name="rlad" value="X" title="Zobrazit kontrolní výpisy volání Herma" onClick="javascript:visilad();"><div class="dlad" id="dlad" style="display:none;"><input class="ilad" id="txgurl" type="text" size="150" value="X" title="Pøíkazová øádka vèetnì parametrù."><input class="ilad" id="txxsl" type="text" size="150" value="X" title="Použitý soubor xsl."><input class="ilad" id="txtype" type="text" size="150" value="X" title="Zpùsob odeslání požadavku."><button onClick="javascript:vypisListShowses();">Seznam sestav</button><div id="dlist"></div>
+</div>
+</div>
+</div>
+</body>
+</html>

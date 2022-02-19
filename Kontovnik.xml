@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="Windows-1250"?>
+<?xml-stylesheet type="text/xsl" href="" ?>
+<DSESTAVY>
+	<INFO>
+		<SUBJEKT>DMD4 GS - kontovnik</SUBJEKT>
+		<AUTHOR>DMD 4 - Generátor sestav</AUTHOR>
+		<EMAIL>hobl@hoblapech.cz</EMAIL>
+		<VERSION>4.7.128</VERSION>
+		<BUILD>378</BUILD>
+		<BUILDTIME>13.09.2011 16:22</BUILDTIME>
+		<FILENAME>Kontovnik.xml</FILENAME>
+		<GUID>{E54F60F8-BD48-4537-911F-17F7BBD6E2C1}</GUID>
+	</INFO>
+	<ORIGIN>
+		<PODNIK>Universal</PODNIK>
+		<ICO>25238078</ICO>
+		<DICO>CZ25238078</DICO>
+		<NAZEVDOADRESY></NAZEVDOADRESY>
+		<A1></A1>
+		<A2></A2>
+		<A3></A3>
+		<A4></A4>
+		<A5></A5>
+		<DATE>10/13/2011</DATE>
+		<ORIGTIME>08:39:47</ORIGTIME>
+		<PARAMS>0</PARAMS>
+		<OBLAST_ID>-1</OBLAST_ID>
+		<OBLAST_NAZEV></OBLAST_NAZEV>
+		<OBLAST_IDENTIFIKACE></OBLAST_IDENTIFIKACE>
+		<SESTAVATX>Kontovník</SESTAVATX>
+		<SESTAVAN>0</SESTAVAN>
+		<POPIS>Kontovník cena v měně podniku</POPIS>
+	</ORIGIN>
+	<HEADSE typses="sfaktur" rozepsat="yes" rozpocet="yes" delitdleobj="yes" podtyp="0">
+		<SOUBOR>Kontovnik.xml</SOUBOR>
+		<NAZEV>Kontovník</NAZEV>
+		<POPIS1></POPIS1>
+		<POPIS2></POPIS2>
+		<XSLFILE>/shkontovnik3s.xsl</XSLFILE>
+	</HEADSE>
+	<SLOUPCE>
+		<SLOUPEC width="" size="0" shape="" format="" digits="0" formatdatumu="" sumuj="2" vyraz="no" skryj="no">
+			<NADPIS>Přepravce</NADPIS>
+			<POLE>35</POLE>
+			<KOD></KOD>
+		</SLOUPEC>
+		<SLOUPEC width="" size="0" shape="!!!!!!!!!!!" format="" digits="0" formatdatumu="" sumuj="2" vyraz="no" skryj="no">
+			<NADPIS>Středisko ORGZV</NADPIS>
+			<POLE>38</POLE>
+			<KOD></KOD>
+		</SLOUPEC>
+		<SLOUPEC width="" size="0" shape="" format="" digits="2" formatdatumu="" sumuj="1" vyraz="no" skryj="no">
+			<NADPIS>Cena</NADPIS>
+			<POLE>62</POLE>
+			<KOD></KOD>
+		</SLOUPEC>
+		<SLOUPEC width="" size="0" shape="" format="" digits="0" formatdatumu="" sumuj="2" vyraz="no" skryj="no">
+			<NADPIS>KAT</NADPIS>
+			<POLE>34</POLE>
+			<KOD></KOD>
+		</SLOUPEC>
+		<SLOUPEC width="" size="0" shape="" format="" digits="0" formatdatumu="" sumuj="2" vyraz="no" skryj="no">
+			<NADPIS>-</NADPIS>
+			<POLE>36</POLE>
+			<KOD></KOD>
+		</SLOUPEC>
+	</SLOUPCE>
+	<FILTRY rawdata="no" sum="yes" title="yes">
+		<FLAGVLASTNOSTIRADEK>12</FLAGVLASTNOSTIRADEK>
+		<FLAGVLASTNOSTIPP>0</FLAGVLASTNOSTIPP>
+		<TYPCASOVEHOPROLINANI>0</TYPCASOVEHOPROLINANI>
+		<FIL typ="equal" pole="38" kod="" mask="!!">79</FIL>
+		<!-- FIL typ="not" pole="34" kod="" mask="!!!">S__</FIL>
+    <LOGICKY_VZTAH>F0 AND F1</LOGICKY_VZTAH>
+    <LOGICKY_VZTAH_MOD_EDITACE>0</LOGICKY_VZTAH_MOD_EDITACE  -->
+	</FILTRY>
+	<TRIDENI>
+		<TRID pole="34" kod="" typ="str">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</TRID>
+		<TRID pole="35" kod="" typ="str">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</TRID>
+		<TRID pole="38" kod="" typ="str">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</TRID>
+	</TRIDENI>
+	<SOUCTY>
+		<SOUC typ="skupina" skupina="38" skupina_kod="" zbmask="!!!!" NADPIS="" n1="" n1_kod="" n2="" n2_kod="" title="0">
+			<POLE mask="!" kod="">35</POLE>
+			<ZOBRSL>
+				<SL skryj="no" text="no"></SL>
+				<SL skryj="no" text="no"></SL>
+				<SL skryj="no" text="no"></SL>
+				<SL skryj="no" text="no"></SL>
+				<SL skryj="no" text="no"></SL>
+			</ZOBRSL>
+		</SOUC>
+		<SOUC typ="jednoradka" skupina="" skupina_kod="" zbmask="" NADPIS="" n1="" n1_kod="" n2="" n2_kod="" title="0">
+			<POLE mask="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" kod="">35</POLE>
+			<ZOBRSL>
+				<SL skryj="no" text="no"></SL>
+				<SL skryj="no" text="no"></SL>
+				<SL skryj="no" text="no"></SL>
+				<SL skryj="no" text="no"></SL>
+				<SL skryj="no" text="no"></SL>
+			</ZOBRSL>
+		</SOUC>
+		<SOUC typ="jednoradka" skupina="" skupina_kod="" zbmask="" NADPIS="" n1="" n1_kod="" n2="" n2_kod="" title="0">
+			<POLE mask="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" kod="">38</POLE>
+			<ZOBRSL>
+				<SL skryj="no" text="no"></SL>
+				<SL skryj="no" text="no"></SL>
+				<SL skryj="no" text="no"></SL>
+				<SL skryj="yes" text="no"></SL>
+				<SL skryj="no" text="no"></SL>
+			</ZOBRSL>
+		</SOUC>
+		<SOUC typ="jednoradka" skupina="" skupina_kod="" zbmask="" NADPIS="" n1="" n1_kod="" n2="" n2_kod="" title="0">
+			<POLE mask="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" kod="">-1</POLE>
+			<ZOBRSL>
+				<SL skryj="yes" text="no"></SL>
+				<SL skryj="yes" text="no"></SL>
+				<SL skryj="no" text="no"></SL>
+				<SL skryj="yes" text="no"></SL>
+				<SL skryj="no" text="no"></SL>
+			</ZOBRSL>
+		</SOUC>
+	</SOUCTY>
+</DSESTAVY>
