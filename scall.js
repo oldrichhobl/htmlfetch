@@ -1,8 +1,8 @@
 /**
- * Lokalizace oddìlovaèe desetinnıch míst
+ * Lokalizace oddï¿½lovaï¿½e desetinnï¿½ch mï¿½st
  * 
  */
-var lok = ['teèka', 'èárka'];
+var lok = ['teï¿½ka', 'ï¿½ï¿½rka'];
 // ************  scglobal.xml  **************
 //   
 //  Hobl a Pech s.r.o. Plzen tel 377423042
@@ -12,7 +12,7 @@ var
   Debagr = false;
 
 /**
- *  parametry pøíkazové øádky naplnìno pøi startu
+ *  parametry pï¿½ï¿½kazovï¿½ ï¿½ï¿½dky naplnï¿½no pï¿½i startu
  * @global
  */
 var gparams = [],
@@ -48,11 +48,11 @@ var spzNahrano = false; // nahral se jiz seznam SPZ ?
 //
 // globalni data pro zapamatovani v kuk cookies
 //
-/* Vymazání všech souborù cookie
-V poèítaèi spuste Chrome.
-Vpravo nahoøe kliknìte na ikonu moností Nastavení.
-V sekci Ochrana soukromí a zabezpeèení kliknìte na Soubory cookie a jiná data webù.
-Kliknìte na Zobrazit všechny soubory cookie a data webù Odstranit vše
+/* Vymazï¿½nï¿½ vï¿½ech souborï¿½ cookie
+V poï¿½ï¿½taï¿½i spusï¿½te Chrome.
+Vpravo nahoï¿½e kliknï¿½te na ikonu moï¿½nostï¿½ Nastavenï¿½.
+V sekci Ochrana soukromï¿½ a zabezpeï¿½enï¿½ kliknï¿½te na Soubory cookie a jinï¿½ data webï¿½.
+Kliknï¿½te na Zobrazit vï¿½echny soubory cookie a data webï¿½ Odstranit vï¿½e
 */
 
 /** @global */
@@ -171,21 +171,21 @@ var selektor = ["body", "table", "thead td, thead th", "tfoot td",
   ".bg0", ".bg1", ".bg2", ".bg3", ".bg4", ".bg5", ".podnik", ".sestava",
   ".header", ".r", ".total", ".reserva", ".reserva", ".zapati", ".tableContainer", "reserva"
 ];
-var seltitle = ["Podkladová barva", "Barva tabulky", "Záhlaví tabulky", "Patièka tabulky",
-  "Souèet úrovnì 0", "Souèet úrovnì 1", "Souèet úrovnì 2", "Souèet úrovnì 3", "Souèet úrovnì 4", "Souèet úrovnì 5", "Podnik, 1.øádka ", "Název sestavy.",
-  "Záhlaví tabulky", "reserva r", "Texty v souètech", "reserva", "reserva", ".zapati", "tableContainer", "reserva"
+var seltitle = ["Podkladovï¿½ barva", "Barva tabulky", "Zï¿½hlavï¿½ tabulky", "Patiï¿½ka tabulky",
+  "Souï¿½et ï¿½rovnï¿½ 0", "Souï¿½et ï¿½rovnï¿½ 1", "Souï¿½et ï¿½rovnï¿½ 2", "Souï¿½et ï¿½rovnï¿½ 3", "Souï¿½et ï¿½rovnï¿½ 4", "Souï¿½et ï¿½rovnï¿½ 5", "Podnik, 1.ï¿½ï¿½dka ", "Nï¿½zev sestavy.",
+  "Zï¿½hlavï¿½ tabulky", "reserva r", "Texty v souï¿½tech", "reserva", "reserva", ".zapati", "tableContainer", "reserva"
 ];
 
 //
 //  
 /**
- * nastaveni seznamu stylù do pole links
+ * nastaveni seznamu stylï¿½ do pole links
  */
 var links = new Array();
 links = document.getElementsByTagName("link");
 
 /**
- * Název základního pouívaného stylu
+ * Nï¿½zev zï¿½kladnï¿½ho pouï¿½ï¿½vanï¿½ho stylu
  */
 var BASE = "BASE";
 
@@ -212,7 +212,7 @@ function getUrlVars() {
  * nacti globalni parametry
  */
 function nactiGparams() {
-  // naplni globálních parametrù dle volani stránky
+  // naplni globï¿½lnï¿½ch parametrï¿½ dle volani strï¿½nky
   gparams = getUrlVars();
   goblast = gparams["obla"];
   if (goblast == undefined) goblast = "";
@@ -251,7 +251,7 @@ function gotoSestava(sestava) {
   window.location = url;
 }
 /**
- * Doplni k url sestavy oblast a user a pøejde na nove URL
+ * Doplni k url sestavy oblast a user a pï¿½ejde na nove URL
  */
 function showobla(sestava) {
   var url = sestava + '&obla=' + goblast;
@@ -273,8 +273,8 @@ function zmenaloc() {
 // ************  scopenxml.xml  **************
 
 /**
- * Otevre nove okno a zapise do nej dany text, nevhodné protoe okno se musí otvírat na pøíkaz uivatele a ne
- * a po Promise
+ * Otevre nove okno a zapise do nej dany text, nevhodnï¿½ protoï¿½e okno se musï¿½ otvï¿½rat na pï¿½ï¿½kaz uï¿½ivatele a ne
+ * aï¿½ po Promise
  * @param {*} text 
  * @param {*} tvarokna 
  * @returns obj obj
@@ -295,7 +295,7 @@ function openwin(text, tvarokna) {
 function getError(errorObject) {
   var Error = new String;
   Error = "Chyba: " + errorObject.parseError.url + "<BR/>" +
-    "Øádek: " + errorObject.parseError.line + "<BR/>" +
+    "ï¿½ï¿½dek: " + errorObject.parseError.line + "<BR/>" +
     "Znak: " + errorObject.parseError.linepos + "<BR/>" +
     "Popis: " + errorObject.parseError.reason;
   return Error;
@@ -310,7 +310,7 @@ function showxpost(XMLDATA, xslfile)
   if (document.getElementById("txgurl")) txgurl.value = 'showses.php?' + DejFiltry() + DejFiltry2();
   if (document.getElementById("txtype")) txtype.value = 'showxpost(); POST ';
   if (document.getElementById("txxsl")) txxsl.value = xslfile;
-  // naèteme sestavu pomocí AJAXu.
+  // naï¿½teme sestavu pomocï¿½ AJAXu.
   ajax({
     // HERMES by mel cist z POST
     url: 'showses.php?' + DejFiltry() + DejFiltry2(),
@@ -320,7 +320,7 @@ function showxpost(XMLDATA, xslfile)
     typ: "xml",
     // data posilana POST
     datapost: XMLDATA.xml,
-    // Tato funkce bude volána, jakmile po?adavek uspìje.
+    // Tato funkce bude volï¿½na, jakmile po?adavek uspï¿½je.
     onSuccess: function (dataXML) {
       var xslXmlView = openXML(xslfile);
       var result = "";
@@ -340,7 +340,7 @@ function storpost(XMLDATA, fname)
   // pi = XMLDATA.createProcessingInstruction('xml', 'version="1.0"  encoding="Windows-1250" ');
   // XMLDATA.insertBefore(pi, XMLDATA.childNodes.item(0));
   // alert('STOR:' + XMLDATA.xml);
-  // naèteme sestavu pomocí AJAXu.
+  // naï¿½teme sestavu pomocï¿½ AJAXu.
   ajax({
     // HERMES cte soubor z POST
     url: 'sendto.php?fname=' + fname,
@@ -350,7 +350,7 @@ function storpost(XMLDATA, fname)
     typ: "xml",
     // data posilana POST
     datapost: XMLDATA.xml,
-    // Tato funkce bude volána, jakmile po?adavek uspìje.
+    // Tato funkce bude volï¿½na, jakmile po?adavek uspï¿½je.
     onSuccess: function (dataXML) {
       //alert("Konec xml: " + dataXML.xml);
     }
@@ -421,7 +421,7 @@ var docCookies = {
 };
 
 /**
- * Naète cookie HTMLV v JSON a rozbalí do variable kuk 
+ * Naï¿½te cookie HTMLV v JSON a rozbalï¿½ do variable kuk 
  * @returns obj true/false
  */
 function cticookie() {
@@ -436,7 +436,7 @@ function cticookie() {
   return true;
 };
 /**
- * Nastaví kuk.ff. podle aktuálního stavu všech vstupù a zapíše JSON do cookie HTMLV
+ * Nastavï¿½ kuk.ff. podle aktuï¿½lnï¿½ho stavu vï¿½ech vstupï¿½ a zapï¿½e JSON do cookie HTMLV
  */
 function zapiscookies() {
   console.log("Zapiscookies 1");
@@ -542,7 +542,7 @@ function nastavDleCookies() {
 
 };
 /**
- * index vybraneho radio-butonu pro uloení do cookies
+ * index vybraneho radio-butonu pro uloï¿½enï¿½ do cookies
  * @param {*} name jmeno radioelementu ()
  * @returns obj index nastaveneho radio-butonu
  */
@@ -588,7 +588,7 @@ function hideMenuSpz() {
 var ZadejRZ = "!! Zadejte RZ. !! ";
 
 // ************  scinit1.xml 2012-06-15 11:20 **************
-var gurl = 'globalni url pro volani sestav '; // ???? moná se volá více sestav ???
+var gurl = 'globalni url pro volani sestav '; // ???? moï¿½nï¿½ se volï¿½ vï¿½ce sestav ???
 var skupiny;
 var statusx;
 var strediska;
@@ -605,7 +605,7 @@ var ridicisrc = "/showses.php?defses=dsestav/katridvyber.xml";
 var hermessagexsl = '/hermessage.xsl';
 //
 function getValueById(stringId, stringNazev) {
-  // získaní konkrétního elementu, kde id=stringId
+  // zï¿½skanï¿½ konkrï¿½tnï¿½ho elementu, kde id=stringId
   console.log(`getValueById(${stringId}, ${stringNazev})`);
   let element = document.getElementById(stringId);
   if (element) {
@@ -638,7 +638,7 @@ function getRadioPrvek(nazevr, nazevp)
 }
 
 /**
- * Vrátí hledany seznam nodù
+ * Vrï¿½tï¿½ hledany seznam nodï¿½
  */
 function selectSingleNode(xml, xpath)
 {
@@ -676,28 +676,28 @@ function nactiroky(CooRok) {
 }
 
 /**
- * !!! openXML ??? naète øidièe ze sestavy katridvyber.xml 
+ * !!! openXML ??? naï¿½te ï¿½idiï¿½e ze sestavy katridvyber.xml 
  */
 function nactiridice() {
   var ses = ridicisrc + '&time=21'; // epocha DMD;
   if (guser != "") ses = ses + '&user=' + guser;
 
   // var xmlDoc = openXML(ses);
-  // naètení ridicu do globalu "cridici"
+  // naï¿½tenï¿½ ridicu do globalu "cridici"
   cridici = xmlDoc.selectSingleNode("//DATA");
   if (cridici == null) {
-    alert('Nelze naèíst seznam øidièù ! \n Pro u?ivatele : ' + guser + '\n' + ses);
+    alert('Nelze naï¿½ï¿½st seznam ï¿½idiï¿½ï¿½ ! \n Pro u?ivatele : ' + guser + '\n' + ses);
   }
 }
 
 /**
- * !!! nahrazuje escape() nekoduje èeské znaky
+ * !!! nahrazuje escape() nekoduje ï¿½eskï¿½ znaky
  * 
  * @param {*} s 
  * @returns obj 
  */
 function escaped(s)
-// nahrazuje escape() nekoduje èeské znaky
+// nahrazuje escape() nekoduje ï¿½eskï¿½ znaky
 {
   var re = / /g;
   return s.replace(re, '%20');
@@ -705,12 +705,12 @@ function escaped(s)
 
 /**
  * vraci parametr filtry ve tvaru pro URL
- * dle vybranıch skupin 
+ * dle vybranï¿½ch skupin 
  * @returns obj 
  */
 function pfiltry() {
   var skupina = '';
-  if (oskupiny.selectedIndex > 0) // první skupina je -- nevybráno --
+  if (oskupiny.selectedIndex > 0) // prvnï¿½ skupina je -- nevybrï¿½no --
     skupina =
     '&filtry=' + escaped(oskupiny.item(oskupiny.selectedIndex).text) + '&fvoz=2';
   if (ooblasti.selectedIndex > 0) {
@@ -731,7 +731,7 @@ function fetchvyvyb() {
   fetch(svysrc)
     .then(response => {
       if (response.status != 200) {
-        console.log(`Nelze naèíst :: ${svysrc} : ${response.statusText}`);
+        console.log(`Nelze naï¿½ï¿½st :: ${svysrc} : ${response.statusText}`);
         throw 'cancel';
       }
       return response.arrayBuffer()
@@ -797,7 +797,7 @@ function ulozSeznam(nody, options, selected) {
       thisNode = nody.iterateNext();
     }
   } catch (e) {
-    alert('Chyba naèteni gskupiny.php : ' + e);
+    alert('Chyba naï¿½teni gskupiny.php : ' + e);
   };
 
   console.log("KONEC ulozSeznam " + selected);
@@ -841,7 +841,7 @@ function fetchcasy(cookie) {
  */
 function fetchSkupinyOblasti(sk, obl, rid) {
   console.log("Fetch Skupiny Oblasti  sk=" + sk + "  obl=" + obl + "  rid=" + rid);
-  // naèteme skupiny oblasti pomocí fetch.
+  // naï¿½teme skupiny oblasti pomocï¿½ fetch.
   fetch(skupinysrc)
     .then(response => response.arrayBuffer())
     .then(data => {
@@ -867,13 +867,13 @@ function nactiSkupinyOblastiPUV(sk, obl, rid) {
   console.log("NactiSkupinyOblasti !!! NEPOUZIVAT !!!  ? " + skupinysrc);
 
   // xmlDocc=openXML(skupinysrc);
-  // naèteme skupiny a oblasti pomocí AJAXu.
+  // naï¿½teme skupiny a oblasti pomocï¿½ AJAXu.
   ajax({
     url: skupinysrc,
     typhttp: "GET",
     // typ vystupu
     typ: "xml",
-    // Tato funkce bude volána, jakmile pozadavek uspìje.
+    // Tato funkce bude volï¿½na, jakmile pozadavek uspï¿½je.
     onSuccess: function (dataXML) {
       let ccc = selectSingleNode(dataXML, "//SKUPINY/SKUPINA");
       ulozSeznam(ccc, "oskupiny", 1);
@@ -901,7 +901,7 @@ function nactiSkupinyOblastiPUV(sk, obl, rid) {
         };
     };
   };
-  // naètení oblastí
+  // naï¿½tenï¿½ oblastï¿½
 
   if (obl) {
     ccc = xmlDocc.selectSingleNode("//OBLASTI");
@@ -965,7 +965,7 @@ function vyberkod() {
 function zobrazauto() {
   var spz = autospz.value;
   var oblast = '';
-  // pridame oblast, pokud je nejaka vybrána
+  // pridame oblast, pokud je nejaka vybrï¿½na
   if (document.getElementById("ooblasti").selectedIndex > 0)
     oblast = escaped(document.getElementById("ooblasti").item(document.getElementById("ooblasti").selectedIndex).text);
   else
@@ -1016,7 +1016,7 @@ function vyberauto() {
       pp = selectSingleNode(responseDoc, "/SHOWX/ORIGIN/XSLFILE").iterateNext();
 
       if (pp == null) {
-        return 'Není naètena správná definice sestavy !!   ::  ' + responseDoc;
+        return 'Nenï¿½ naï¿½tena sprï¿½vnï¿½ definice sestavy !!   ::  ' + responseDoc;
       };
       var ss = ' ';
       let nodes = selectSingleNode(responseDoc, "//TABLE/DATA/R/H[3]");
@@ -1070,7 +1070,7 @@ function vyberautoNewWindow() {
       pp = selectSingleNode(responseDoc, "/SHOWX/ORIGIN/XSLFILE").iterateNext();
 
       if (pp == null) {
-        return 'Není naètena správná definice sestavy !!   ::  ' + responseDoc;
+        return 'Nenï¿½ naï¿½tena sprï¿½vnï¿½ definice sestavy !!   ::  ' + responseDoc;
       };
       aPopUp = window.open('Vyber_vozidla', '_blank');
       ndoc = aPopUp.document;
@@ -1135,7 +1135,7 @@ function vyberridice() {
     ndoc = pickRidice.document;
     ndoc.close();
     ndoc.open();
-    ndoc.write('Vıbìr øidièe .....');
+    ndoc.write('Vï¿½bï¿½r ï¿½idiï¿½e .....');
     if (cridici === null) {
       nactiridice()
     }
@@ -1167,13 +1167,13 @@ function vyberridice() {
 function zobrazridice() {
   var jmeno = oridici.value;
   var oblast = '';
-  // pridame oblast, pokud je nejaka vybrána
+  // pridame oblast, pokud je nejaka vybrï¿½na
   if (document.getElementById("ooblasti").selectedIndex > 0)
     oblast = escaped(document.getElementById("ooblasti").item(document.getElementById("ooblasti").selectedIndex).text);
   else
     oblast = goblast;
   if (jmeno == '') {
-    alert("!! Zadejte jméno øidièe. !!");
+    alert("!! Zadejte jmï¿½no ï¿½idiï¿½e. !!");
     return;
   }
   var url = '/RidPodr.html?spz=' + jmeno;
@@ -1186,8 +1186,8 @@ function zobrazridice() {
 }
 
 /**
- * sebere nastavene filtry: na auta = všechna, jedno, skupina a na ridice 
- * èasovı filter = mìsíc, období , èasovı úsek
+ * sebere nastavene filtry: na auta = vï¿½echna, jedno, skupina a na ridice 
+ * ï¿½asovï¿½ filter = mï¿½sï¿½c, obdobï¿½ , ï¿½asovï¿½ ï¿½sek
  * @returns obj 
  */
 function DejFiltry() {
@@ -1199,7 +1199,7 @@ function DejFiltry() {
   // pouze je-li  filter na vozidla
   if (document.getElementById("Vfilter")) {
     if (document.all["V"][1].checked) {
-      if (document.getElementById("oskupiny").selectedIndex > 0) // první skupina je nevybráno 
+      if (document.getElementById("oskupiny").selectedIndex > 0) // prvnï¿½ skupina je nevybrï¿½no 
         vozf =
         '&filtry=' + escaped(document.getElementById("oskupiny").item(oskupiny.selectedIndex).text) + '&fvoz=2';
     }
@@ -1226,7 +1226,7 @@ function DejFiltry() {
     var dodata = '';
     time = 0;
     if (document.getElementById("ointerval").value == '') {
-      alert('Není zadán èasovı interval !  return;    ');
+      alert('Nenï¿½ zadï¿½n ï¿½asovï¿½ interval !  return;    ');
     } else {
       let odi = document.getElementById("ointerval").value.split('-');
       let doi = document.getElementById("dinterval").value.split('-');
@@ -1242,7 +1242,7 @@ function DejFiltry() {
     console.log("DATUM OD time  = ", time);
     if (time == 0) {
       if (document.getElementById("ointerval").value == '') {
-        alert('Není zadán èasovı interval !  return;    ');
+        alert('Nenï¿½ zadï¿½n ï¿½asovï¿½ interval !  return;    ');
       } else {
         let odi = document.getElementById("ointerval").value.split('-');
         let doi = document.getElementById("dinterval").value.split('-');
@@ -1253,13 +1253,13 @@ function DejFiltry() {
       casf = '&time=' + time;
     }
   }
-  // -------------  filtry øidièù ---------------------
+  // -------------  filtry ï¿½idiï¿½ï¿½ ---------------------
   //    pouze je-li  filter na ridice na strance
   if (document.getElementById("Rfilter")) {
     let radioR = document.getElementsByName("R");
     if (radioR[0].checked) vozf += '';
     if (radioR[1].checked) {
-      if (document.getElementById("oridskup").selectedIndex > 0) // první skupina je nevybráno 
+      if (document.getElementById("oridskup").selectedIndex > 0) // prvnï¿½ skupina je nevybrï¿½no 
         vozf +=
         '&filtryr=' + escaped(document.getElementById("oridskup").item(oridskup.selectedIndex).text) + '&frid=2';
     };
@@ -1269,13 +1269,13 @@ function DejFiltry() {
       }
   }
   // ------ pridame oblast pokud je vybrana -----------
-  if (document.getElementById("ooblasti").selectedIndex > 0) { // první skupina je -- nevybráno --
+  if (document.getElementById("ooblasti").selectedIndex > 0) { // prvnï¿½ skupina je -- nevybrï¿½no --
     vozf +=
       '&obla=' + escaped(document.getElementById("ooblasti").item(document.getElementById("ooblasti").selectedIndex).text);
   }
   if (guser != "") vozf = vozf + '&user=' + guser;
   console.log("**** oblast,user =  ", vozf);
-  // Filtry viditelnosti a zaøazení èinnosti
+  // Filtry viditelnosti a zaï¿½azenï¿½ ï¿½innosti
   vozf += getRadioPrvek("rvv", "vv");
   vozf += getRadioPrvek("rvp", "vp");
   vozf += getRadioPrvek("rvr", "vr");
@@ -1309,7 +1309,7 @@ function DejFiltry2() {
   }
   // pridame kod substratu , pokud je uveden
   let kodsub = getValueById('kods', '&filtrys');
-  // pridame kod pracovního zaøazení øidièe , pokud je uveden
+  // pridame kod pracovnï¿½ho zaï¿½azenï¿½ ï¿½idiï¿½e , pokud je uveden
   let kodprac = getValueById('kodpr', '&filtrypz');
   // pridame kod provoznich podminek , pokud jsou uvedeny
   let kodprov = getValueById('kodpp', '&filtrypp');
@@ -1331,7 +1331,7 @@ function hermessage(xml) {
   console.log("CHYBA Hermesmsg ", xml);
   var xsl = openMSXML();
   if (!xsl.load(hermessagexsl)) {
-    return ("Nelze najít stylesheet : /hermessage.xsl  \n " + xsl.parseError.reason);
+    return ("Nelze najï¿½t stylesheet : /hermessage.xsl  \n " + xsl.parseError.reason);
   }
   try {
     return (xml.transformNode(xsl));
@@ -1341,7 +1341,7 @@ function hermessage(xml) {
 }
 
 /**
- * vrati string sestavy, kterou lze zapsat do okénka
+ * vrati string sestavy, kterou lze zapsat do okï¿½nka
  * sestava je tvorena podle sesxsl s parametrem str
  * @param {*} sestava 
  * @param {*} sesxsl 
@@ -1354,25 +1354,25 @@ function konvertses(sestava, sesxsl, str) {
   var xml = openMSXML();
 
   if (!xml.load(url)) {
-    return ("Nelze najít definici sestavy : " + url + " \n" + xml.parseError.reason);
+    return ("Nelze najï¿½t definici sestavy : " + url + " \n" + xml.parseError.reason);
   }
   if (xml.parseError.errorCode != 0) {
-    return ("Nelze naèíst sestavu : " + url + " \n" + xml.parseError.reason +
+    return ("Nelze naï¿½ï¿½st sestavu : " + url + " \n" + xml.parseError.reason +
       xml.parseError.srctext);
   }
   // test zda je to vubec sestava 
   var pp = xml.selectSingleNode("//PARAMS")
   if (pp == null) {
-    return ("Není naètena správná definice sestavy !! " + xml.xml);
+    return ("Nenï¿½ naï¿½tena sprï¿½vnï¿½ definice sestavy !! " + xml.xml);
   }
   var xsl = openMSXML();
   if (!xsl.load(sesxsl)) {
-    return ("Nelze najít stylesheet : " + sesxsl + " \n" + xsl.parseError.reason);
+    return ("Nelze najï¿½t stylesheet : " + sesxsl + " \n" + xsl.parseError.reason);
   }
-  // v parametru "str" je filter na støedisko nebo ridice apod.
+  // v parametru "str" je filter na stï¿½edisko nebo ridice apod.
   var pp = xml.selectSingleNode("//PARAMS")
   if (pp == null) {
-    return ("Není naètena správná definice sestavy !! " + sestava);
+    return ("Nenï¿½ naï¿½tena sprï¿½vnï¿½ definice sestavy !! " + sestava);
   }
   pp.text = str; // parametr str     
 
@@ -1408,7 +1408,7 @@ function xslZmenaBarev(zmenaxsl) {
   xsl.setProperty("SelectionNamespaces",
     "xmlns:xsl='http://www.w3.org/1999/XSL/Transform' xmlns:def='http://www.w3.org/TR/REC-html40'")
   if (!xsl.load(zmenaxsl)) {
-    return ("Nelze najít stylesheet : " + zmenaxsl + " \n" + xsl.parseError.reason);
+    return ("Nelze najï¿½t stylesheet : " + zmenaxsl + " \n" + xsl.parseError.reason);
   }
   //
   // doplneni barevneho schematu do xsl:
@@ -1450,9 +1450,9 @@ function dejses(url, zmenaxsl) {
       console.dir(responseDoc);
       // test zda je to chybova zprava
       let pp = selectSingleNode(responseDoc, "/MESSAGES/INFO").iterateNext();
-      console.log("Chybová zpráva ? MESSAGES/INFO = " + pp);
+      console.log("Chybovï¿½ zprï¿½va ? MESSAGES/INFO = " + pp);
       if (pp) {
-        console.log("Chybová zpráva : " + pp.textContent);
+        console.log("Chybovï¿½ zprï¿½va : " + pp.textContent);
         // je to chybova zprava
         // showErrText(pp.textContent)
         showMessage(responseDoc," in dejses()");
@@ -1460,10 +1460,10 @@ function dejses(url, zmenaxsl) {
       };
       // test zda je to vubec sestava
       pp = selectSingleNode(responseDoc, "/SHOWX/ORIGIN/XSLFILE").iterateNext();
-      console.log("Je to vùbec sestava ? /SHOWX/ORIGIN/XSLFILE = " + pp);
+      console.log("Je to vï¿½bec sestava ? /SHOWX/ORIGIN/XSLFILE = " + pp);
       if (pp == null) {
-        console.log("!! Není naètena správná definice sestavy    ::  " + responseDoc);
-        return 'Není naètena správná definice sestavy !!   ::  ' + responseDoc;
+        console.log("!! Nenï¿½ naï¿½tena sprï¿½vnï¿½ definice sestavy    ::  " + responseDoc);
+        return 'Nenï¿½ naï¿½tena sprï¿½vnï¿½ definice sestavy !!   ::  ' + responseDoc;
       };
       if (zmenaxsl == null) zmenaxsl = pp.textContent;
       console.log("zmenaxsl = " + pp.textContent);
@@ -1500,11 +1500,11 @@ function dejsesPUVODNI(url, zmenaxsl)
 {
   var xml = openMSXML();
   if (!xml.load(url)) {
-    return ("<br/>Nelze najít definici sestavy : <br/>" + url + "<br/>" + xml.parseError.reason) +
+    return ("<br/>Nelze najï¿½t definici sestavy : <br/>" + url + "<br/>" + xml.parseError.reason) +
       "<a href=\"" + url + "\" >PODROBNOSTI</a>";
   }
   if (xml.parseError.errorCode != 0) {
-    return ("Nelze naèíst sestavu : " + url + " \n" + xml.parseError.reason +
+    return ("Nelze naï¿½ï¿½st sestavu : " + url + " \n" + xml.parseError.reason +
       xml.parseError.srctext);
   }
   // test zda je to chybova zprava
@@ -1516,7 +1516,7 @@ function dejsesPUVODNI(url, zmenaxsl)
   // test zda je to vubec sestava
   var pp = xml.selectSingleNode("/SHOWX/ORIGIN/XSLFILE")
   if (pp == null) {
-    return 'Není naètena správná definice sestavy !!   ::  ' + xml.xml;
+    return 'Nenï¿½ naï¿½tena sprï¿½vnï¿½ definice sestavy !!   ::  ' + xml.xml;
   };
   if (zmenaxsl == null) zmenaxsl = pp.text;
   if (document.getElementById("txxsl")) txxsl.value = zmenaxsl;
@@ -1531,7 +1531,7 @@ function dejsesPUVODNI(url, zmenaxsl)
 }
 /**
  * 
- * @param {*} url definice sestavy - kompletní cesta
+ * @param {*} url definice sestavy - kompletnï¿½ cesta
  * @param {*} xsl 
  * @returns obj text/chybu v HTML kodu
  */
@@ -1540,11 +1540,11 @@ function dejsesdoexpco(url, xsl)
 {
   var xml = openMSXML();
   if (!xml.load(url)) {
-    return ("<br/>Nelze najít definici sestavy : <br/>" + url + "<br/>" + xml.parseError.reason) +
+    return ("<br/>Nelze najï¿½t definici sestavy : <br/>" + url + "<br/>" + xml.parseError.reason) +
       "<a href=\"" + url + "\" >PODROBNOSTI</a>";
   }
   if (xml.parseError.errorCode != 0) {
-    return ("Nelze naèíst sestavu : " + url + " \n" + xml.parseError.reason +
+    return ("Nelze naï¿½ï¿½st sestavu : " + url + " \n" + xml.parseError.reason +
       xml.parseError.srctext);
   }
   // test zda je to chybova zprava
@@ -1582,7 +1582,7 @@ function showsourcexml(tvarokna) {
 
 /**
  * Universalni zobrazeni sestavy
- * volba vıstupního formátu HTML XML PDF  20101124 oh.
+ * volba vï¿½stupnï¿½ho formï¿½tu HTML XML PDF  20101124 oh.
  * - dejses() - window.open()- ndoc.write() 
  * @param {*} url 
  * @param {*} tvarokna 
@@ -1592,7 +1592,7 @@ function showsourcexml(tvarokna) {
 function showsesx(url, tvarokna, xslnew) {
   console.log("showsesx")
   // ?????? 2021
-  var xslfile = 'nepouito';
+  var xslfile = 'nepouï¿½ito';
   if (document.getElementById("txgurl")) txgurl.value = url;
   if (document.getElementById("txtype")) txtype.value = 'showsesx(); GET ';
   if (!tvarokna) {
@@ -1621,7 +1621,7 @@ function showsesx(url, tvarokna, xslnew) {
   return;
 }
 /**
- * zobrazeni sestavy s vybranymi filtry pøímım zavoláním showses.php do aktualniho okna
+ * zobrazeni sestavy s vybranymi filtry pï¿½ï¿½mï¿½m zavolï¿½nï¿½m showses.php do aktualniho okna
  * @param {*} sestava 
  * @param {*} tvarokna 
  * @param {*} xslnew 
@@ -1637,8 +1637,8 @@ function showsesXXX(sestava, tvarokna, xslnew) {
 }
 
 /**
- * Zobrazí standardní chybovou zprávu od Herma
- * @param {*} messDoc standardní chybová zpráva z Herma v nodu MESSAGE
+ * Zobrazï¿½ standardnï¿½ chybovou zprï¿½vu od Herma
+ * @param {*} messDoc standardnï¿½ chybovï¿½ zprï¿½va z Herma v nodu MESSAGE
  * @returns obj nic
  */
 function showMessage(messDoc, messTxt) {
@@ -1659,7 +1659,7 @@ function showMessage(messDoc, messTxt) {
 };
 
 /**
- * zobrazí textovou chybovou zprávu
+ * zobrazï¿½ textovou chybovou zprï¿½vu
  * @param {*} text 
  * @returns obj nic
  */
@@ -1678,11 +1678,11 @@ function openWinUrlError() {
 }
 
 /**
- * Zobrazí v novém oknì zadané url
+ * Zobrazï¿½ v novï¿½m oknï¿½ zadanï¿½ url
  * @param {*} url 
  * @param {*} topic 
  * @param {*} tvarokna 
- * @returns obj odkaz na document v novém oknì aPopUp
+ * @returns obj odkaz na document v novï¿½m oknï¿½ aPopUp
  */
 function openwinUrl(url, topic, tvarokna) {
   console.log("openwin " + topic + "---" + url);
@@ -1705,7 +1705,7 @@ function openwinUrl(url, topic, tvarokna) {
 }
 
 /**
- * Zobrazení sestavy za pomoci Promise.allSettled(urls[xsl,xml])
+ * Zobrazenï¿½ sestavy za pomoci Promise.allSettled(urls[xsl,xml])
  * BYlo na zkousku Promise.allSettled - asi se nebude pouzivat.
  * Nahrazeno novym showses()se dvema fetch() v sobe vnorenymi
  * @param {*} sestava 
@@ -1714,7 +1714,7 @@ function openwinUrl(url, topic, tvarokna) {
  * @returns obj nic
  */
 function showPromise(sestava, tvarokna, xslnew)
-// zobrazeni sestavy pøímo voláním Herma*
+// zobrazeni sestavy pï¿½ï¿½mo volï¿½nï¿½m Herma*
 {
   let gurl = '/showses.php?defses=dsestav/' +
     sestava + DejFiltry() + DejFiltry2();
@@ -1868,7 +1868,7 @@ function predOpenWokno(sestava) {
        </style> 
       ` +
     '<body bgcolor=lightgreen onLoad="self.focus()">' +
-    '<div  class="wait"> *** Pøíprava sestavy : <b>' + sestava + '</b> ***' +
+    '<div  class="wait"> *** Pï¿½ï¿½prava sestavy : <b>' + sestava + '</b> ***' +
     `
      
      <!-- 5 spinner -->
@@ -1924,7 +1924,7 @@ function showXML(xmlDoc, xslFile)
     ndoc.writeln(xmlStr);
     return;
   }
-  // naèteme xsl pomocí 1.fetch.
+  // naï¿½teme xsl pomocï¿½ 1.fetch.
   console.log('SHOWXML - START FETCH XSLFILE = ' + xslFile);
   fetch(xslFile)
     .then(function (result) {
@@ -2008,7 +2008,7 @@ function showXML(xmlDoc, xslFile)
      ndoc.writeln(xmlStr);
      return;
    }
-   // naèteme xsl pomocí 1.fetch.
+   // naï¿½teme xsl pomocï¿½ 1.fetch.
    console.log('konvertXML - START FETCH XSLFILE = ' + xslFile);
    fetch(xslFile)
      .then(function (result) {
@@ -2093,7 +2093,7 @@ function kontrolniZapis(gurl,xslfile,pozn)
 }
 
 /**
- * Jako showPromise, ale nepouziva allSettled, nıbr ma dva fetch() v sobì vnoøené
+ * Jako showPromise, ale nepouziva allSettled, nï¿½brï¿½ ma dva fetch() v sobï¿½ vnoï¿½enï¿½
  * protoze jsem si puvodne myslel, ze velke sestavy se v Edge nezobrazi - 
  * problem, ale byl v otevirani nove zalozky a pak v nasledujici dlouhe pauze
  * 
@@ -2103,7 +2103,7 @@ function kontrolniZapis(gurl,xslfile,pozn)
  * @returns obj 
  */
 function showses(sestava, typ, xslnew)
-// zobrazeni sestavy pøímo voláním Herma*
+// zobrazeni sestavy pï¿½ï¿½mo volï¿½nï¿½m Herma*
 {
 
   console.log("********************!! showses typ = ", typ);
@@ -2136,7 +2136,7 @@ function showses(sestava, typ, xslnew)
   popUpWokno = predOpenWokno(sestava);
   let ndoc = popUpWokno.document;
   // 
-  // naèteme xsl pomocí 1.fetch.
+  // naï¿½teme xsl pomocï¿½ 1.fetch.
   console.log('SHOWSES - START FETCH XSLFILE = ' + xslfile);
   fetch(xslfile)
     .then(function (result) {
@@ -2246,7 +2246,7 @@ function showses(sestava, typ, xslnew)
 
 
 /**
- * doplní showses.php + filtry a zavolá openwinUrl 
+ * doplnï¿½ showses.php + filtry a zavolï¿½ openwinUrl 
  * 
  * @param {*} sestava 
  * @param {*} tvarokna 
@@ -2266,8 +2266,8 @@ function showsesDirect(sestava, tvarokna, xslnew) {
 }
 
 /**
- * zobrazeni sestavy na locale pøes showsesx() - !!! nefunkèní nepokraèuje v Promise
- * pøesnìji Dejses() nezobrazuje vısledek ve winopen()ani nevrací textovı vısledek
+ * zobrazeni sestavy na locale pï¿½es showsesx() - !!! nefunkï¿½nï¿½ nepokraï¿½uje v Promise
+ * pï¿½esnï¿½ji Dejses() nezobrazuje vï¿½sledek ve winopen()ani nevracï¿½ textovï¿½ vï¿½sledek
  * @param {*} sestava 
  * @param {*} tvarokna 
  * @param {*} xslnew 
@@ -2332,13 +2332,13 @@ function showseskal(sestava, pxsl)
 {
   gurl = '/showses.php?defses=dsestav/' +
     sestava + DejFiltry() + DejFiltry2();
-  // naèteme aktualni kalendar
+  // naï¿½teme aktualni kalendar
   var fkalend = '/data/XML/kalendar.xml';
   var xmlk = openXML(fkalend);
   // do ORIGIN/PARAMS v kalendari doplnime cestu na zobrazovanou sestavu
   var pp = xmlk.selectSingleNode("//ORIGIN/PARAMS")
   if (pp == null) {
-    alert("Není naèten správnı kalendáø  !! " + fkalend);
+    alert("Nenï¿½ naï¿½ten sprï¿½vnï¿½ kalendï¿½ï¿½  !! " + fkalend);
   }
   pp.text = gurl; // xsl si sam zavola potrebnou sestavu     
 
@@ -2453,7 +2453,7 @@ function zobrKontovGo(zoXml) {
   let pmezi = selectSingleNode(zoXml, "//SOUCTY/SOUC[@skupina = 38]/POLE/@mask");
   let pzbmask = selectSingleNode(zoXml, "//SOUCTY/SOUC[@skupina = 38]/@zbmask");
   if ((pp == null) || (pmask == null) || (phodn == null) || (pmezi == null) || (pzbmask == null)) {
-    alert(" !! Nesprávná definice kontovníku: ??? ");
+    alert(" !! Nesprï¿½vnï¿½ definice kontovnï¿½ku: ??? ");
     return null;
   }
   // vytvoreni filtru
@@ -2522,7 +2522,7 @@ function zobrKontovOld(sestava, filter, mezisoucty, xsl)
   var pmezi = XMLDATA.selectSingleNode("//SOUCTY/SOUC[@skupina = 38]/POLE/@mask");
   var pzbmask = XMLDATA.selectSingleNode("//SOUCTY/SOUC[@skupina = 38]/@zbmask");
   if ((pp == null) || (pmask == null) || (phodn == null) || (pmezi == null) || (pzbmask == null)) {
-    alert(" !! Nesprávná definice kontovníku: " + sestava);
+    alert(" !! Nesprï¿½vnï¿½ definice kontovnï¿½ku: " + sestava);
     return;
   }
   // vytvoreni filtru
@@ -2656,7 +2656,7 @@ var listShowses = [];
 var nameShowses = "A1";
 
 function showseskat(adresar, sestava, tvarokna)
-// zobrazeni sestavy s vybranymi filtry s mozností tøídìní
+// zobrazeni sestavy s vybranymi filtry s moznostï¿½ tï¿½ï¿½dï¿½nï¿½
 // + udrzuje seznam otevrenych okenek
 {
   //!!!! **** DODELAT - zatim presmerovano na obyc. sestavu:
@@ -2683,13 +2683,13 @@ function showseskat(adresar, sestava, tvarokna)
   var oSes = {
     vokno: aPopUp,
     name: "B1 - Jmeno okna",
-    nazev: "Název sestavy",
+    nazev: "Nï¿½zev sestavy",
     popis: "Popis sestavy",
     oblast: "neuvedena",
     casf: "od-do",
     url: "URLtext"
   };
-  // vytvoøíme název sestavy a url pro volání Herma
+  // vytvoï¿½ï¿½me nï¿½zev sestavy a url pro volï¿½nï¿½ Herma
   oSes.name = 'B' + (listShowses.length + 1);
   oSes.popis = 'popis sestavy';
   oSes.nazev = sestava;
@@ -2710,7 +2710,7 @@ function vypisListShowses() {
     try {
       xml = listShowses[i].vokno.XMLDocument;
     } catch (ex) {
-      dlist.innerHTML = "Sestava è. " + i + " byla ji zavøena - nelze porovnávat";
+      dlist.innerHTML = "Sestava ï¿½. " + i + " byla jiï¿½ zavï¿½ena - nelze porovnï¿½vat";
       return;
     };
 
@@ -2772,9 +2772,9 @@ function makefvybPUVODNI(table)
       console.dir(responseDoc);
       // test zda je to chybova zprava
       let pp = selectSingleNode(responseDoc, "/MESSAGES/INFO").iterateNext();
-      console.log("Chybová zpráva ? MESSAGES/INFO = " + pp);
+      console.log("Chybovï¿½ zprï¿½va ? MESSAGES/INFO = " + pp);
       if (pp) {
-        console.log("Chybová zpráva : " + pp.textContent);
+        console.log("Chybovï¿½ zprï¿½va : " + pp.textContent);
         // je to chybova zprava
         // showErrText(pp.textContent)
         showMessage(responseDoc," in makefvyb()");
@@ -2782,10 +2782,10 @@ function makefvybPUVODNI(table)
       };
       // test zda je to vubec sestava
       pp = selectSingleNode(responseDoc, "/SHOWX/ORIGIN/XSLFILE").iterateNext();
-      console.log("Je to vùbec sestava ? /SHOWX/ORIGIN/XSLFILE = " + pp.text);
+      console.log("Je to vï¿½bec sestava ? /SHOWX/ORIGIN/XSLFILE = " + pp.text);
       if (pp == null) {
-        console.log("!! Není naètena správná definice sestavy    ::  " + responseDoc);
-        return 'Není naètena správná definice sestavy !!   ::  ' + responseDoc;
+        console.log("!! Nenï¿½ naï¿½tena sprï¿½vnï¿½ definice sestavy    ::  " + responseDoc);
+        return 'Nenï¿½ naï¿½tena sprï¿½vnï¿½ definice sestavy !!   ::  ' + responseDoc;
       };
       console.log("OK  makefvyb OK");
 
@@ -2813,7 +2813,7 @@ function makefvybPUVODNI(table)
         };
       } else {
         var newText =
-          document.createTextNode('Neni nic nadefinováno v tabulce vıbav/dokumentù');
+          document.createTextNode('Neni nic nadefinovï¿½no v tabulce vï¿½bav/dokumentï¿½');
         sdiv.appendChild(newText);
       };
 
@@ -2844,8 +2844,8 @@ function fetchPostXML(cesta, xml, fce) {
     .then(function (result) {
       console.dir(result);
       if (result.status != 200) {
-        console.log(`Nelze naèíst :: ${cesta} : ${result.statusText}`);
-        throw `Nelze naèíst :: ${cesta} : ${result.statusText}`;
+        console.log(`Nelze naï¿½ï¿½st :: ${cesta} : ${result.statusText}`);
+        throw `Nelze naï¿½ï¿½st :: ${cesta} : ${result.statusText}`;
       }
       return result.arrayBuffer();
     })
@@ -2880,8 +2880,8 @@ function fetchXML(cesta, fce) {
     .then(function (result) {
       console.dir(result);
       if (result.status != 200) {
-        console.log(`Nelze naèíst :: ${cesta} : ${result.statusText}`);
-        throw `Nelze naèíst :: ${cesta} : ${result.statusText}`;
+        console.log(`Nelze naï¿½ï¿½st :: ${cesta} : ${result.statusText}`);
+        throw `Nelze naï¿½ï¿½st :: ${cesta} : ${result.statusText}`;
       }
       return result.arrayBuffer();
     })
@@ -2928,7 +2928,7 @@ function ukazXML(xmlDoc) {
   const serializer = new XMLSerializer();
   const xmlStr = serializer.serializeToString(xmlDoc);
 
-  // var byte = base64ToArrayBuffer(_base64Str);
+  // var byte = base64ToArrayBuffer(_base64Str);â…˜
   // var byte = xmlStr.split("");
   // var byte = "<a><b><c/><d/></b><e/></a>";
   var byte = xmlStr;
@@ -2949,7 +2949,7 @@ function ukazXML2(xmlDoc) {
   let _contentType = "data:text/xml";
   const serializer = new XMLSerializer();
   const xmlStr = serializer.serializeToString(xmlDoc);
-
+7
   // var byte = base64ToArrayBuffer(_base64Str);
   // var byte = xmlStr.split("");
   // var byte = "<a><b><c/><d/></b><e/></a>";
@@ -2975,7 +2975,7 @@ function ukazGraf() {
   }
   if (!document.querySelector("input[name='C']").checked) // neni zadany mesic a rok
   {
-    alert("  !! Zadejte mìsíc a rok. !! \n  Graf je pouze pro období jeden mìsíc");
+    alert("  !! Zadejte mï¿½sï¿½c a rok. !! \n  Graf je pouze pro obdobï¿½ jeden mï¿½sï¿½c");
     return;
   }
   var url = "/gtankhis.htm?" +
@@ -2984,7 +2984,7 @@ function ukazGraf() {
     '&amp;rok=' + kuk.ff.CooRok +
     '&amp;filtry=' +
     spz + '&amp;fvoz=1';
-  aPopUp = window.open(url, 'Obsah_nádre', tvaroknagraf);
+  aPopUp = window.open(url, 'Obsah_nï¿½drï¿½e', tvaroknagraf);
   aPopUp.focus();
   return;
 }

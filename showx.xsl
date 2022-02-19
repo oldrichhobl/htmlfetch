@@ -138,15 +138,15 @@
    
 
      function callexcel(){
-    // pøevod po jednotlivých øádkách vcetne zahlavi
+    // pï¿½evod po jednotlivï¿½ch ï¿½ï¿½dkï¿½ch vcetne zahlavi
      var x=tbl.rows;
       try{
         var oXL = new ActiveXObject("Excel.Application");
                 }
                 catch(e)
-                {alert("Ne, nelze spustit Excel :: " + e.description + "\n obvyklé pøíèiny chyby:"+
-                "\n - na poèítaèi není nainstalován Excel "+
-                "\n - zabezpeèení IE zakazuje spouštìt ActiveX prvky ");
+                {alert("Ne, nelze spustit Excel :: " + e.description + "\n obvyklï¿½ pï¿½ï¿½ï¿½iny chyby:"+
+                "\n - na poï¿½ï¿½taï¿½i nenï¿½ nainstalovï¿½n Excel "+
+                "\n - zabezpeï¿½enï¿½ IE zakazuje spouï¿½tï¿½t ActiveX prvky ");
                 return
                 } 
       oXL.Visible = true;
@@ -210,9 +210,9 @@
         var oXL = new ActiveXObject("Excel.Application");
 	}
 	catch(e)
-	{alert("Nelze spustit Excel :: " + e.description + "\n obvyklé pøíèiny chyby:"+
-	"\n - na poèítaèi není nainstalován Excel "+
-	"\n - zabezpeèení IE zakazuje spouštìt ActiveX prvky ");
+	{alert("Nelze spustit Excel :: " + e.description + "\n obvyklï¿½ pï¿½ï¿½ï¿½iny chyby:"+
+	"\n - na poï¿½ï¿½taï¿½i nenï¿½ nainstalovï¿½n Excel "+
+	"\n - zabezpeï¿½enï¿½ IE zakazuje spouï¿½tï¿½t ActiveX prvky ");
 	return
 	} 
       oXL.Visible = true;
@@ -230,7 +230,7 @@
         var oXL = new ActiveXObject("com.sun.star.ServiceManager");
 	}
 	catch(e)
-	{alert("Ne, nelze spustit Open Office :: " + e.description + "\n Na tomto poèítaèi není zøejmì nainstalován Open Office!!");
+	{alert("Ne, nelze spustit Open Office :: " + e.description + "\n Na tomto poï¿½ï¿½taï¿½i nenï¿½ zï¿½ejmï¿½ nainstalovï¿½n Open Office!!");
 	return
 	} 
 	 var objDesktop = oXL.createInstance("com.sun.star.frame.Desktop");
@@ -313,11 +313,11 @@
           <text>Stylesheet</text>:
           <xsl:value-of select="//ORIGIN/XSLFILE"/>
           <br/>
-          <text>Sloupcù</text>:
+          <text>Sloupcï¿½</text>:
           <xsl:value-of select="//TAIL/PCSL"/>
-      ::          <text>øádek</text>:
+      ::          <text>ï¿½ï¿½dek</text>:
           <xsl:value-of select="//TAIL/PCR"/>
-      ::          <text>mezisouètù</text>:
+      ::          <text>mezisouï¿½tï¿½</text>:
           <xsl:value-of select="//TAIL/PCSUB"/>
       
       :          <text>APPENDIX</text>:
@@ -335,8 +335,8 @@
         <xsl:apply-templates/>
         <TR>
           <TD class="noprint" style="text-align:left">
-            <A title="Zpìt ">
-              <xsl:attribute name="HREF">javascript:zpet();</xsl:attribute>&#8656;&#160;Zpìt</A>
+            <A title="Zpï¿½t ">
+              <xsl:attribute name="HREF">javascript:zpet();</xsl:attribute>&#8656;&#160;Zpï¿½t</A>
 
           </TD>
 
@@ -350,15 +350,15 @@
           </TD>
           <TD class="noprint">
 
-            <button title="Zobrazit pouze souètové øádky ">
+            <button title="Zobrazit pouze souï¿½tovï¿½ ï¿½ï¿½dky ">
               <xsl:attribute name="onClick">javascript:pouzesoucty();</xsl:attribute>&#8721;</button>
-            <button title="Vložit sestavu do OpenOffice ">
+            <button title="Vloï¿½it sestavu do OpenOffice ">
               <xsl:attribute name="onClick">javascript:callopenoffice();</xsl:attribute>O</button>
-            <button title="Vložit datové øádky sestavy do Excelu ">
+            <button title="Vloï¿½it datovï¿½ ï¿½ï¿½dky sestavy do Excelu ">
               <xsl:attribute name="onClick">javascript:callexcel();</xsl:attribute>&#8658;</button>
-            <button title="Vložit celou sestavu do Excelu (vèetnì filtrù a komentáøù)  ">
+            <button title="Vloï¿½it celou sestavu do Excelu (vï¿½etnï¿½ filtrï¿½ a komentï¿½ï¿½ï¿½)  ">
               <xsl:attribute name="onClick">javascript:callexcel2();</xsl:attribute>E</button>
-            <button title="Podrobnosti o zobrazené sestavì ">
+            <button title="Podrobnosti o zobrazenï¿½ sestavï¿½ ">
               <xsl:attribute name="onClick">javascript:showPage('<xsl:value-of select="//ORIGIN/TYPSES"/>.htm');
               </xsl:attribute>
 	 ?
@@ -419,7 +419,7 @@
             </xsl:if>
           </TD>
           <TD ALIGN="center">
-            <text>èas výpoètu</text>: 
+            <text>ï¿½as vï¿½poï¿½tu</text>: 
             <xsl:value-of select="./DATSTAT"/>
           </TD>
         </TR>
@@ -453,13 +453,13 @@
   </xsl:template>
   <xsl:template match="MESDAT">
     <TD align="center">
-      <text>mìsíc</text>:      <xsl:value-of select="."/>
+      <text>mï¿½sï¿½c</text>:      <xsl:value-of select="."/>
  . </TD>
   </xsl:template>
 
   <xsl:template match="SESTAVAN">
     <TD align="center">
-      <text>è.sestavy</text>:      <xsl:value-of select="."/>
+      <text>ï¿½.sestavy</text>:      <xsl:value-of select="."/>
 . </TD>
   </xsl:template>
   <xsl:template match="DEFFILE">
@@ -497,7 +497,7 @@
         <TFOOT>
           <TR class="zapati">
             <TD class="zapati">
-              <A class="noprint" title="Informace o sestavì" href="javascript:informace();">?</A>
+              <A class="noprint" title="Informace o sestavï¿½" href="javascript:informace();">?</A>
             </TD>
             <TD class="zapati">
               <xsl:attribute name="colspan">

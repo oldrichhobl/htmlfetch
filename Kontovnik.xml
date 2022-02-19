@@ -3,7 +3,7 @@
 <DSESTAVY>
 	<INFO>
 		<SUBJEKT>DMD4 GS - kontovnik</SUBJEKT>
-		<AUTHOR>DMD 4 - Generátor sestav</AUTHOR>
+		<AUTHOR>DMD 4 - Generï¿½tor sestav</AUTHOR>
 		<EMAIL>hobl@hoblapech.cz</EMAIL>
 		<VERSION>4.7.128</VERSION>
 		<BUILD>378</BUILD>
@@ -27,25 +27,25 @@
 		<OBLAST_ID>-1</OBLAST_ID>
 		<OBLAST_NAZEV></OBLAST_NAZEV>
 		<OBLAST_IDENTIFIKACE></OBLAST_IDENTIFIKACE>
-		<SESTAVATX>Kontovník</SESTAVATX>
+		<SESTAVATX>Kontovnï¿½k</SESTAVATX>
 		<SESTAVAN>0</SESTAVAN>
-		<POPIS>Kontovník cena v mìnì podniku</POPIS>
+		<POPIS>Kontovnï¿½k cena v mï¿½nï¿½ podniku</POPIS>
 	</ORIGIN>
 	<HEADSE typses="sfaktur" rozepsat="yes" rozpocet="yes" delitdleobj="yes" podtyp="0">
 		<SOUBOR>Kontovnik.xml</SOUBOR>
-		<NAZEV>Kontovník</NAZEV>
+		<NAZEV>Kontovnï¿½k</NAZEV>
 		<POPIS1></POPIS1>
 		<POPIS2></POPIS2>
 		<XSLFILE>/shkontovnik3s.xsl</XSLFILE>
 	</HEADSE>
 	<SLOUPCE>
 		<SLOUPEC width="" size="0" shape="" format="" digits="0" formatdatumu="" sumuj="2" vyraz="no" skryj="no">
-			<NADPIS>Pøepravce</NADPIS>
+			<NADPIS>Pï¿½epravce</NADPIS>
 			<POLE>35</POLE>
 			<KOD></KOD>
 		</SLOUPEC>
 		<SLOUPEC width="" size="0" shape="!!!!!!!!!!!" format="" digits="0" formatdatumu="" sumuj="2" vyraz="no" skryj="no">
-			<NADPIS>Støedisko ORGZV</NADPIS>
+			<NADPIS>Stï¿½edisko ORGZV</NADPIS>
 			<POLE>38</POLE>
 			<KOD></KOD>
 		</SLOUPEC>
