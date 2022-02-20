@@ -2507,7 +2507,7 @@ function zobrKontov(sestava, filterin, mezisouctyin, xslF)
   xslFile = xslF;
 
   // nactem sestavu 
-  fetchXML('/dsestav/' + sestava, zobrKontovGo)
+  fetchXML('/dsestav/' + sestava, Go)
 }
 
 function zobrKontovOld(sestava, filter, mezisoucty, xsl)
